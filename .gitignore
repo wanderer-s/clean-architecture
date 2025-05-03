@@ -9,8 +9,8 @@ build/
 .idea
 
 ### kotlin project
-kotlin/blind/.gradle
-kotlin/blind/.idea
+kotlin-app/blind/.gradle
+kotlin-app/blind/.idea
 
 *.iws
 *.iml
