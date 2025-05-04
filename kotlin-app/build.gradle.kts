@@ -10,7 +10,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    implementation("com.password4j:password4j:1.8.1")
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:5.9.0")
+
 }
 
 tasks.test {
