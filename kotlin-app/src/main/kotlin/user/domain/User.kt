@@ -6,10 +6,19 @@ class User(
     val email: String,
     var nickName: String,
     plainPassword: String,
-    val id: Long = 0L,
+    id: Long = 0L,
     val createdAt: LocalDateTime = LocalDateTime.now(),
     var updatedAt: LocalDateTime = LocalDateTime.now()
 ) {
+    var id: Long = id
+        private set
+
+    fun updateId(id: Long) {
+        if(this.id == 0L) {
+            this.id = id
+        }
+    }
+
     private var password = Password
         .hash(plainPassword)
         .withArgon2()
