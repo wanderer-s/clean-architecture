@@ -9,19 +9,11 @@ import io.kotest.matchers.shouldNotBe
 class UserTest: DescribeSpec({
     describe("updatePassword") {
         val user = User("test@test.io", "test", "password")
-        it("입력된 값이 현재 비밀번호가 일치하지 않으면 Exception 발생") {
-            shouldThrow<IllegalArgumentException> {
-                user.updatePassword("wrongPassword", "newPassword")
-            }
-        }
 
-        it("입력된 값이 현재 비밀번호와 같으면 Exception 발생") {
-            shouldThrow<IllegalArgumentException> {
-                user.updatePassword("password", "password")
-            }
-        }
         it("비밀번호 변경 성공") {
-            user.updatePassword("password", "newPassword")
+            user.password shouldBe "password"
+            user.updatePassword("newPassword")
+            user.password shouldBe "newPassword"
         }
     }
 
