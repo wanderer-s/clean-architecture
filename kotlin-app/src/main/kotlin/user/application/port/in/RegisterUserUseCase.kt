@@ -1,6 +1,8 @@
 package user.application.port.`in`
 
+import user.adapter.`in`.web.RegisterUserRequest
+
 interface RegisterUserUseCase {
-    fun isRegisteredEmail(): Boolean
-    fun register()
+    fun isRegisteredEmail(email: String): Boolean
+    fun register(param: RegisterUserRequest)
 }
