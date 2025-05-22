@@ -2,9 +2,9 @@ package user.adapter.out.persistence
 
 import User
 import user.application.port.out.LoadUserPort
-import user.application.port.out.RegisterUserPort
+import user.application.port.out.SaveUserPort
 
-class UserPersistenceAdapter: LoadUserPort, RegisterUserPort {
+class UserPersistenceAdapter: LoadUserPort, SaveUserPort {
     private val users = mutableMapOf<Long, User>()
     private var nextId = 1L
 

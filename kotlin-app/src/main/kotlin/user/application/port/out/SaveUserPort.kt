@@ -2,6 +2,6 @@ package user.application.port.out
 
 import User
 
-interface RegisterUserPort {
+interface SaveUserPort {
     fun save(user: User)
 }

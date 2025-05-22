@@ -5,11 +5,11 @@ import user.adapter.`in`.web.RegisterUserRequest
 import user.application.port.`in`.RegisterUserUseCase
 import user.application.port.out.LoadUserPort
 import com.password4j.Password
-import user.application.port.out.RegisterUserPort
+import user.application.port.out.SaveUserPort
 
 class RegisterUserService(
     private val loadUserPort: LoadUserPort,
-    private val registerUserPort: RegisterUserPort,
+    private val saveUserPort: SaveUserPort,
     ): RegisterUserUseCase {
     override fun isRegisteredEmail(email: String): Boolean {
         val user = loadUserPort.findOneByEmail(email)
@@ -22,7 +22,7 @@ class RegisterUserService(
         }
         val hashedPassword = Password.hash(param.plainPassword).withArgon2().result
 
-        val user = User(param.email, param.nickName, hashedPassword)
-        registerUserPort.save(user)
+        val user = User(param.email, param.nickname, hashedPassword)
+        saveUserPort.save(user)
     }
 }
