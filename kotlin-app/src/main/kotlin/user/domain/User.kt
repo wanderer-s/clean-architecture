@@ -3,13 +3,16 @@ import java.time.LocalDateTime
 
 class User(
     val email: String,
-    var nickName: String,
+    nickname: String,
     password: String,
     id: Long = 0L,
     val createdAt: LocalDateTime = LocalDateTime.now(),
     var updatedAt: LocalDateTime = LocalDateTime.now()
 ) {
     var id: Long = id
+        private set
+
+    var nickname = nickname
         private set
 
     var password = password
@@ -27,11 +30,11 @@ class User(
     }
 
     fun updateNickname(newNickname: String) {
-        if(nickName == newNickname) {
-            throw IllegalArgumentException("전과 같은 닉네임입니다")
+        require(nickname != newNickname) {
+            "전과 같은 닉네임입니다"
         }
-
-        this.nickName = newNickname
+        nickname = newNickname
         this.updatedAt = LocalDateTime.now()
+
     }
 }

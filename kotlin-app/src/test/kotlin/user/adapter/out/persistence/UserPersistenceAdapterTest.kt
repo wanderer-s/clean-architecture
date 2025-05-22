@@ -22,7 +22,7 @@ class UserPersistenceAdapterTest: DescribeSpec({
             it("id로 사용자 정보를 조회할 수 있다") {
                 val user = userPersistenceAdapter.findOneById(1L)
                 user?.email shouldBe "test@test.io"
-                user?.nickName shouldBe "test"
+                user?.nickname shouldBe "test"
             }
         }
 
@@ -30,7 +30,7 @@ class UserPersistenceAdapterTest: DescribeSpec({
             it("email로 사용자 정보를 조회할 수 있다") {
                 val user = userPersistenceAdapter.findOneByEmail("test@test.io")
                 user?.email shouldBe "test@test.io"
-                user?.nickName shouldBe "test"
+                user?.nickname shouldBe "test"
             }
 
             it("없는 email로 사용자 정보를 조회하면 null을 반환한다") {

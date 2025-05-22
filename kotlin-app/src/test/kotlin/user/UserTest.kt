@@ -28,8 +28,8 @@ class UserTest: DescribeSpec({
 
         it("닉네임 변경 성공") {
             user.updateNickname("newNickname")
-            user.nickName shouldNotBe "test"
-            user.nickName shouldBe "newNickname"
+            user.nickname shouldNotBe "test"
+            user.nickname shouldBe "newNickname"
         }
     }
 
