@@ -10,8 +10,22 @@ data class RegisterUserRequest(
     val email: String,
 
     @field:NotBlank
-    val nickName: String,
+    val nickname: String,
 
-    @field:Size(max = 6)
+    @field:NotBlank
+    @field:Size(min = 6)
     val plainPassword: String
+)
+
+data class UpdateUserNicknameRequest(
+    @field:NotBlank
+    val nickname: String,
+)
+
+data class UpdateUserPasswordRequest(
+    @field:NotBlank
+    val previousPassword: String,
+
+    @field:NotBlank
+    val newPassword: String
 )
