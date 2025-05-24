@@ -5,7 +5,7 @@ import io.kotest.assertions.throwables.shouldThrow
 
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
-import user.adapter.`in`.web.RegisterUserRequest
+import user.adapter.`in`.web.dto.RegisterUserRequest
 import user.adapter.out.persistence.UserPersistenceAdapter
 
 class RegisterUserServiceTest: DescribeSpec({

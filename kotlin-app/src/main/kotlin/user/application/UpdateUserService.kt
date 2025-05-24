@@ -4,7 +4,7 @@ import User
 import com.password4j.Password
 import global.exception.ForbiddenException
 import global.exception.NotFoundException
-import user.adapter.`in`.web.UpdateUserPasswordRequest
+import user.adapter.`in`.web.dto.UpdateUserPasswordRequest
 import user.application.port.`in`.UpdateUserUseCase
 import user.application.port.out.LoadUserPort
 import user.application.port.out.SaveUserPort

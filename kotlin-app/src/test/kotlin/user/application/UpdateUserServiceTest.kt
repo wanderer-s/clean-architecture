@@ -7,7 +7,7 @@ import global.exception.NotFoundException
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
-import user.adapter.`in`.web.UpdateUserPasswordRequest
+import user.adapter.`in`.web.dto.UpdateUserPasswordRequest
 import user.adapter.out.persistence.UserPersistenceAdapter
 
 class UpdateUserServiceTest: DescribeSpec({

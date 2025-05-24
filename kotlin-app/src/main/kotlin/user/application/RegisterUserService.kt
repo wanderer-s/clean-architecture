@@ -1,7 +1,7 @@
 package user.application
 
 import User
-import user.adapter.`in`.web.RegisterUserRequest
+import user.adapter.`in`.web.dto.RegisterUserRequest
 import user.application.port.`in`.RegisterUserUseCase
 import user.application.port.out.LoadUserPort
 import com.password4j.Password
