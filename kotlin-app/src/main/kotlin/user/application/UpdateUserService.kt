@@ -14,10 +14,7 @@ class UpdateUserService(
     private val saveUserPort: SaveUserPort,
 ): UpdateUserUseCase {
     private fun getUserById(id: Long): User {
-        val user = this.loadUserPort.findOneById(id)
-        require(user != null) {
-            throw NotFoundException("사용자 정보를 찾을 수 없습니다")
-        }
+        val user = this.loadUserPort.findOneById(id) ?: throw NotFoundException("사용자 정보를 찾을 수 없습니다")
         return user
     }
 
