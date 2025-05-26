@@ -5,8 +5,9 @@ import io.kotest.assertions.throwables.shouldThrow
 
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
-import user.adapter.`in`.web.dto.RegisterUserRequest
-import user.adapter.out.persistence.UserPersistenceAdapter
+import com.anonymousboard.user.adapter.`in`.web.dto.RegisterUserRequest
+import com.anonymousboard.user.adapter.out.persistence.UserPersistenceAdapter
+import com.anonymousboard.user.application.RegisterUserService
 
 class RegisterUserServiceTest: DescribeSpec({
     val userPersistenceAdapter = UserPersistenceAdapter()

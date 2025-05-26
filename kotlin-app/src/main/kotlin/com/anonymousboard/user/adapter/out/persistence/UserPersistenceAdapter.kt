@@ -1,8 +1,8 @@
-package user.adapter.out.persistence
+package com.anonymousboard.user.adapter.out.persistence
 
 import User
-import user.application.port.out.LoadUserPort
-import user.application.port.out.SaveUserPort
+import com.anonymousboard.user.application.port.out.LoadUserPort
+import com.anonymousboard.user.application.port.out.SaveUserPort
 
 class UserPersistenceAdapter: LoadUserPort, SaveUserPort {
     private val users = mutableMapOf<Long, User>()

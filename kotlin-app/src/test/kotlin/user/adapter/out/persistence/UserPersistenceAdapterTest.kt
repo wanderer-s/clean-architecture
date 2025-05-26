@@ -1,6 +1,7 @@
 package user.adapter.out.persistence
 
 import User
+import com.anonymousboard.user.adapter.out.persistence.UserPersistenceAdapter
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
 

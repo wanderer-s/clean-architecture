@@ -1,4 +1,4 @@
-package user.application.port.`in`
+package com.anonymousboard.user.application.port.`in`
 
 import User
 

@@ -1,4 +1,4 @@
-package user.application.port.out
+package com.anonymousboard.user.application.port.out
 
 import User
 

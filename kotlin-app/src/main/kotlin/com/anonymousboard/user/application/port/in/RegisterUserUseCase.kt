@@ -1,6 +1,6 @@
-package user.application.port.`in`
+package com.anonymousboard.user.application.port.`in`
 
-import user.adapter.`in`.web.dto.RegisterUserRequest
+import com.anonymousboard.user.adapter.`in`.web.dto.RegisterUserRequest
 
 interface RegisterUserUseCase {
     fun isRegisteredEmail(email: String): Boolean

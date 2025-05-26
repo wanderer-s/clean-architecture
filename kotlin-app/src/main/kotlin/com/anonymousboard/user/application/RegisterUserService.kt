@@ -1,11 +1,11 @@
-package user.application
+package com.anonymousboard.user.application
 
 import User
-import user.adapter.`in`.web.dto.RegisterUserRequest
-import user.application.port.`in`.RegisterUserUseCase
-import user.application.port.out.LoadUserPort
+import com.anonymousboard.user.adapter.`in`.web.dto.RegisterUserRequest
+import com.anonymousboard.user.application.port.`in`.RegisterUserUseCase
+import com.anonymousboard.user.application.port.out.LoadUserPort
 import com.password4j.Password
-import user.application.port.out.SaveUserPort
+import com.anonymousboard.user.application.port.out.SaveUserPort
 
 class RegisterUserService(
     private val loadUserPort: LoadUserPort,

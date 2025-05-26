@@ -1,13 +1,13 @@
-package user.application
+package com.anonymousboard.user.application
 
 import User
 import com.password4j.Password
-import global.exception.ForbiddenException
-import global.exception.NotFoundException
-import user.adapter.`in`.web.dto.UpdateUserPasswordRequest
-import user.application.port.`in`.UpdateUserUseCase
-import user.application.port.out.LoadUserPort
-import user.application.port.out.SaveUserPort
+import com.anonymousboard.global.exception.ForbiddenException
+import com.anonymousboard.global.exception.NotFoundException
+import com.anonymousboard.user.adapter.`in`.web.dto.UpdateUserPasswordRequest
+import com.anonymousboard.user.application.port.`in`.UpdateUserUseCase
+import com.anonymousboard.user.application.port.out.LoadUserPort
+import com.anonymousboard.user.application.port.out.SaveUserPort
 
 class UpdateUserService(
     private val loadUserPort: LoadUserPort,

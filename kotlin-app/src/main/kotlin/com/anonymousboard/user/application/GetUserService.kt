@@ -1,9 +1,9 @@
-package user.application
+package com.anonymousboard.user.application
 
 import User
-import global.exception.NotFoundException
-import user.application.port.`in`.GetUserUseCase
-import user.application.port.out.LoadUserPort
+import com.anonymousboard.global.exception.NotFoundException
+import com.anonymousboard.user.application.port.`in`.GetUserUseCase
+import com.anonymousboard.user.application.port.out.LoadUserPort
 
 class GetUserService(
     private val loadUserPort: LoadUserPort

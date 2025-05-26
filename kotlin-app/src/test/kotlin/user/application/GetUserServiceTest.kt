@@ -1,11 +1,12 @@
 package user.application
 
 import User
-import global.exception.NotFoundException
+import com.anonymousboard.global.exception.NotFoundException
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
-import user.adapter.out.persistence.UserPersistenceAdapter
+import com.anonymousboard.user.adapter.out.persistence.UserPersistenceAdapter
+import com.anonymousboard.user.application.GetUserService
 
 class GetUserServiceTest: DescribeSpec({
     val userPersistenceAdapter = UserPersistenceAdapter()

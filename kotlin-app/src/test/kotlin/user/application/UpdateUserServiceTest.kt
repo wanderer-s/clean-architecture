@@ -2,13 +2,14 @@ package user.application
 
 import User
 import com.password4j.Password
-import global.exception.ForbiddenException
-import global.exception.NotFoundException
+import com.anonymousboard.global.exception.ForbiddenException
+import com.anonymousboard.global.exception.NotFoundException
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
-import user.adapter.`in`.web.dto.UpdateUserPasswordRequest
-import user.adapter.out.persistence.UserPersistenceAdapter
+import com.anonymousboard.user.adapter.`in`.web.dto.UpdateUserPasswordRequest
+import com.anonymousboard.user.adapter.out.persistence.UserPersistenceAdapter
+import com.anonymousboard.user.application.UpdateUserService
 
 class UpdateUserServiceTest: DescribeSpec({
     val userPersistenceAdapter = UserPersistenceAdapter()
