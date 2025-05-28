@@ -4,7 +4,9 @@ import User
 import com.anonymousboard.global.exception.NotFoundException
 import com.anonymousboard.user.application.port.`in`.GetUserUseCase
 import com.anonymousboard.user.application.port.out.LoadUserPort
+import org.springframework.stereotype.Service
 
+@Service
 class GetUserService(
     private val loadUserPort: LoadUserPort
 ): GetUserUseCase {

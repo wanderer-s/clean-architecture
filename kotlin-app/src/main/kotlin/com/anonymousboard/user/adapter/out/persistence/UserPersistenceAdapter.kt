@@ -3,7 +3,9 @@ package com.anonymousboard.user.adapter.out.persistence
 import User
 import com.anonymousboard.user.application.port.out.LoadUserPort
 import com.anonymousboard.user.application.port.out.SaveUserPort
+import org.springframework.stereotype.Repository
 
+@Repository
 class UserPersistenceAdapter: LoadUserPort, SaveUserPort {
     private val users = mutableMapOf<Long, User>()
     private var nextId = 1L
